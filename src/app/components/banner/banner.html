@@ -1,0 +1,17 @@
+<div class="banner-container">
+  @for (banner of banners(); track $index) {
+    <div class="slide" [class.active]="$index === currentIndex()">
+      <img [src]="banner.image" [alt]="banner.title">
+      <div class="caption">
+        <h2>{{ banner.title }}</h2>
+        <p>{{ banner.subtitle }}</p>
+      </div>
+    </div>
+  }
+
+  <div class="dots">
+    @for (dot of banners(); track $index) {
+      <span class="dot" [class.active]="$index === currentIndex()" (click)="currentIndex.set($index)"></span>
+    }
+  </div>
+</div>

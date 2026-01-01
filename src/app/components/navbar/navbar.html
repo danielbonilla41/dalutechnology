@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <a routerLink="/" class="logo">
+      <span class="brand">DALU TECHNOLOGY</span>
+    </a>
+
+    <div class="search-box">
+      <input type="text" placeholder="Buscar productos...">
+      <button type="button">🔍</button>
+    </div>
+
+    <div class="nav-actions">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+      
+      <div class="cart-icon">
+        <span class="icon">🛒</span>
+        @if (cartCount > 0) {
+          <span class="badge">{{ cartCount }}</span>
+        }
+      </div>
+    </div>
+  </div>
+</nav>

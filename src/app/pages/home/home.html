@@ -1,0 +1,24 @@
+<section class="container">
+  
+  <app-banner></app-banner>
+
+  <h1>Nuestros Productos</h1>
+
+  <div class="product-grid">
+    @for (product of productService.products(); track product.id) {
+      <article class="product-card">
+        <div class="image-container">
+          <img [src]="product.image" [alt]="product.name">
+        </div>
+        <div class="info">
+          <h3>{{ product.name }}</h3>
+          <p class="category">{{ product.category }}</p>
+          <span class="price">{{ product.price | currency:'USD' }}</span>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </article>
+    } @empty {
+      <p>Cargando productos o no hay stock disponible...</p>
+    }
+  </div>
+</section>
