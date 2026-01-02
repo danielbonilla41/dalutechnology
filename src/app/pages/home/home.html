@@ -2,19 +2,16 @@
   
   <app-banner></app-banner>
 
-  <h1>Nuestros Productos</h1>
-
   <div class="product-grid">
     @for (product of productService.products(); track product.id) {
-      <article class="product-card">
+      <article class="product-card" [routerLink]="['/product', product.id]" style="cursor: pointer;">
         <div class="image-container">
           <img [src]="product.image" [alt]="product.name">
         </div>
         <div class="info">
           <h3>{{ product.name }}</h3>
           <p class="category">{{ product.category }}</p>
-          <span class="price">{{ product.price | currency:'USD' }}</span>
-          <button class="btn-add">Añadir al carrito</button>
+          <span class="price">{{ product.price | currency:'$' }}</span>
         </div>
       </article>
     } @empty {
