@@ -9,10 +9,11 @@ import { BannerModel } from '../../models/banner.model';
   styleUrl: './banner.css',
 })
 export class Banner {
-banners = signal<BannerModel[]>([
-    { image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80', title: 'Grandes Ofertas', subtitle: 'Hasta 50% de descuento' },
-    { image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80', title: 'Nueva Colección', subtitle: 'Lo último en tecnología' },
-    { image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80', title: 'Accesorios Premium', subtitle: 'Calidad garantizada' }
+  banners = signal<BannerModel[]>([
+    { image: 'banner/2.webp', title: 'Nueva Colección', subtitle: 'Lo último en tecnología' },
+    { image: 'banner/4.webp', title: 'Accesorios Premium', subtitle: 'Calidad garantizada' },
+    { image: 'banner/1.webp', title: 'Grandes Ofertas', subtitle: 'Hasta 30% de descuento' },
+    { image: 'banner/3.webp', title: 'Accesorios Premium', subtitle: 'Calidad garantizada' }
   ]);
 
   currentIndex = signal(0);

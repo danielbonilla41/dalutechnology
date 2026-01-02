@@ -1,0 +1,42 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>📦 Datos de Envío</h2>
+      <button class="close-btn" (click)="closeModal()">&times;</button>
+    </div>
+    
+    <p class="modal-subtitle">Solicitando: <strong>{{product.name}} (x{{quantity}})</strong></p>
+
+    <form (submit)="$event.preventDefault()">
+      <div class="form-group">
+        <label>🔹 Nombre Completo:</label>
+        <input type="text" [(ngModel)]="formData.nombre" name="nombre" placeholder="Tu nombre">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>🔹 Cédula:</label>
+          <input type="text" [(ngModel)]="formData.cedula" name="cedula" placeholder="ID">
+        </div>
+        <div class="form-group">
+          <label>🔹 Celular:</label>
+          <input type="tel" [(ngModel)]="formData.celular" name="celular" placeholder="Móvil">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>🔹 Ciudad:</label>
+        <input type="text" [(ngModel)]="formData.ciudad" name="ciudad" placeholder="Ciudad">
+      </div>
+
+      <div class="form-group">
+        <label>🔹 Dirección:</label>
+        <input type="text" [(ngModel)]="formData.direccion" name="direccion" placeholder="Dirección completa">
+      </div>
+
+      <button type="button" class="btn-whatsapp" (click)="sendWhatsApp()">
+         🚀 Confirmar por WhatsApp
+      </button>
+    </form>
+  </div>
+</div>

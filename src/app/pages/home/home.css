@@ -1,36 +1,66 @@
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   padding: 1rem;
+}
+
+/* Ajuste para Tablets (2 columnas) */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ajuste para Celulares (1 columna) */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+.image-container {
+  width: 100%;
+  height: 280px; /* Mantenemos la altura que definimos */
+  overflow: hidden;
+  background: #fff;
+  display: block; /* Cambiamos a block para control total del ancho */
+}
+
+.image-container img {
+ width: 100%;
+  height: 100%;
+  /* 'cover' hará que la imagen llene el contenedor completamente. 
+     Si prefieres que se vea toda la imagen pero al límite, usa 'contain' sin padding */
+  object-fit: cover; 
+  padding: 0; /* Eliminamos cualquier margen interno para que la imagen crezca */
+  transition: none; /* Eliminamos cualquier efecto de transición previo */
+  display: block;
 }
 
 .product-card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.image-container {
-  height: 200px;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-container img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
+  border: 1px solid #f0f0f0;
+  transition: box-shadow 0.3s ease;
 }
 
 .info {
