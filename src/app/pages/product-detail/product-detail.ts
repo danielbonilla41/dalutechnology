@@ -1,9 +1,12 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, signal, LOCALE_ID } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductService } from '../../services/product-service';
 import { Product } from '../../models/product.model';
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { OrderModal } from '../../components/order-modal/order-modal';
+import localeEsCo from '@angular/common/locales/es-CO';
+registerLocaleData(localeEsCo, 'es-Co');
+
 @Component({
   selector: 'app-product-detail',
   standalone: true,

@@ -23,7 +23,29 @@
   color: #333;
 }
 
-.brand { color: #3498db; }
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.main-logo {
+  height: 45px; /* Ajusta según el diseño de tu navbar */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.main-logo:hover {
+  transform: scale(1.05); /* Efecto sutil al pasar el mouse */
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #333;
+}
 
 .search-box {
   flex: 1;

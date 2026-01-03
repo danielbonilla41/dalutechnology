@@ -27,12 +27,19 @@ export class OrderModal {
   }
 
   sendWhatsApp() {
+    const formattedTotal = new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+      maximumFractionDigits: 0
+    }).format(this.product.price * this.quantity);
+
+
     const message =
       ` *NUEVO PEDIDO - PAGO CONTRA ENTREGA* 
 
 *Producto:* ${this.product.name}
 *Cantidad:* ${this.quantity}
-*Total:* $${this.product.price * this.quantity} + ENVIO
+*Total:* ${formattedTotal} + ENVIO
 
 *Datos de envío:*
  *Nombre:* ${this.formData.nombre}

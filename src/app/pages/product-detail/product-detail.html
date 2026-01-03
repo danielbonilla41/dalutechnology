@@ -10,7 +10,7 @@
     <div class="info-section">
       <a routerLink="/" class="btn-back">← Volver</a>
       <h1>{{ product()?.name }}</h1>
-      <p class="price">{{ product()?.price | currency }}</p>
+      <p class="price">{{ product()?.price | currency:'$':'symbol':'1.0-0':'es-Co' }} + Envío</p>
 
       <div class="purchase-zone">
         <div class="quantity-wrapper">
@@ -40,20 +40,33 @@
         </div>
       </div>
     </div>
-
   </div>
 
-  <p class="description">{{ product()?.description }}</p>
+  <div class="product-detail-container">
+    <section class="main-info">
+    </section>
+
+    <hr class="separator">
+
+    <section class="description-section">
+      <div class="description-header">
+        <h3> Descripción </h3>
+      </div>
+
+      <div class="description-content">
+        <p class="text-long">
+          {{ product()?.description }}
+        </p>
+      </div>
+    </section>
+  </div>
 
   } @else {
   <p>Producto no encontrado.</p>
   }
 
   @if (showModal() && product()) {
-  <app-order-modal 
-    [product]="product()!" 
-    [quantity]="quantity()" 
-    (close)="showModal.set(false)">
+  <app-order-modal [product]="product()!" [quantity]="quantity()" (close)="showModal.set(false)">
   </app-order-modal>
-}
+  }
 </div>
