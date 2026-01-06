@@ -22,6 +22,7 @@ export class ProductDetail {
   product = signal<Product | undefined>(undefined);
   loading = signal(true);
   quantity = signal(1);
+  totalPrice = signal(0);
   showModal = signal(false);
 
   ngOnInit() {
@@ -35,6 +36,7 @@ export class ProductDetail {
         error: () => this.loading.set(false)
       });
     }
+     this.totalPrice.set(this.product()?.price || 0);
   }
 
   addToCart() {
@@ -55,9 +57,10 @@ export class ProductDetail {
 
   updateQty(value: number) {
     const newQty = this.quantity() + value;
-    // Validamos que no baje de 1 ni suba de 10 (o tu stock máximo)
-    if (newQty >= 1 && newQty <= 10) {
+    if (newQty >= 1) {
       this.quantity.set(newQty);
+      const total = (this.product()?.price || 0) * newQty;
+      this.totalPrice.set(total);
     }
   }
 }

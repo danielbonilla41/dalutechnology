@@ -10,7 +10,17 @@
     <div class="info-section">
       <a routerLink="/" class="btn-back">← Volver</a>
       <h1>{{ product()?.name }}</h1>
-      <p class="price">{{ product()?.price | currency:'$':'symbol':'1.0-0':'es-Co' }} + Envío</p>
+
+      <div class="price-container">
+        <span class="main-price">
+          {{ totalPrice() | currency:'$':'symbol':'1.0-0':'es-Co' }} + Envío
+        </span>
+
+        <div class="payment-note">
+          <i class="fa fa-info-circle"></i>
+          Precio válido únicamente para <strong>pago contra entrega</strong>
+        </div>
+      </div>
 
       <div class="purchase-zone">
         <div class="quantity-wrapper">
@@ -18,7 +28,7 @@
           <div class="qty-selector">
             <button type="button" class="qty-btn" (click)="updateQty(-1)" [disabled]="quantity() <= 1">−</button>
             <input type="number" [value]="quantity()" readonly>
-            <button type="button" class="qty-btn" (click)="updateQty(1)" [disabled]="quantity() >= 10">+</button>
+            <button type="button" class="qty-btn" (click)="updateQty(1)" [disabled]="quantity() >= 20">+</button>
           </div>
         </div>
 
