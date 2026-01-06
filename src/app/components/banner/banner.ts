@@ -10,10 +10,10 @@ import { BannerModel } from '../../models/banner.model';
 })
 export class Banner {
   banners = signal<BannerModel[]>([
-    { image: 'banner/2.webp', title: 'Nueva Colección', subtitle: 'Lo último en tecnología' },
-    { image: 'banner/4.webp', title: 'Accesorios Premium', subtitle: 'Calidad garantizada' },
-    { image: 'banner/1.webp', title: 'Grandes Ofertas', subtitle: 'Hasta 30% de descuento' },
-    { image: 'banner/3.webp', title: 'Accesorios Premium', subtitle: 'Calidad garantizada' }
+    { image: 'banner/1.webp', title: 'Mouse Pad Xl', subtitle: 'Carga tu smartphone o dispositivo compatible Qi mientras juegas o trabajas' },
+    { image: 'banner/2.webp', title: 'Kit 4 Ventiladores Rgb Y Argb + Hub + Control', subtitle: 'Diseñados como coolers de alto rendimiento para una disipación de calor superior' },
+    { image: 'banner/4.webp', title: 'Soporte Para Tarjeta Grafica', subtitle: 'El accesorio ideal para mantener tu GPU protegida, estable y con un estilo gamer espectacular' },
+    { image: 'banner/3.webp', title: 'Disipador De Calor Ssd M.2', subtitle: 'Mantén tu SSD siempre fresco y con estilo gamer' }
   ]);
 
   currentIndex = signal(0);
