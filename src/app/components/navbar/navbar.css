@@ -31,7 +31,7 @@
 }
 
 .main-logo {
-  height: 45px; /* Ajusta según el diseño de tu navbar */
+  height: 50px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -45,29 +45,6 @@
   font-weight: 700;
   font-size: 1.2rem;
   color: #333;
-}
-
-.search-box {
-  flex: 1;
-  display: flex;
-  max-width: 500px;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 0.6rem 1rem;
-  border: 1px solid #ddd;
-  border-radius: 20px 0 0 20px;
-  outline: none;
-}
-
-.search-box button {
-  padding: 0 15px;
-  background: #3498db;
-  color: white;
-  border: none;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
 }
 
 .nav-actions {
