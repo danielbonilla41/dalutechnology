@@ -1,4 +1,4 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Product } from '../models/product.model';
 import { of } from 'rxjs';
 
@@ -12,6 +12,7 @@ export class ProductService {
       id: 5,
       name: 'Kit 4 Ventiladores Rgb Y Argb + Hub + Control',
       price: 99999,
+      oldPrice: 179999,
       description: this.getDescription(5),
       image: 'img/DALU_P011_3.webp',
       linkMeli: 'https://articulo.mercadolibre.com.co/MCO-2102530108-kit-4-ventiladores-rgb-y-argb-hub-control-_JM'
@@ -20,6 +21,7 @@ export class ProductService {
       id: 6,
       name: 'Soporte Para Tarjeta Grafica Argb Uphere',
       price: 56999,
+      oldPrice: 110000,
       description: this.getDescription(6),
       image: 'img/DALU_P004_02.webp',
       linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1431487755-soporte-para-tarjeta-grafica-argb-uphere-_JM'
@@ -27,7 +29,8 @@ export class ProductService {
     {
       id: 7,
       name: 'Pasta Térmica Disipador De Calor Maxtor Ctg8, 4g + Cleanser',
-      price: 18700,
+      price: 18950,
+      oldPrice: 42950,
       description: this.getDescription(7),
       image: 'img/DALU_P001_2.webp',
       linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1411308641-pasta-termica-disipador-de-calor-maxtor-ctg8-4g-cleanser-_JM'
@@ -35,7 +38,8 @@ export class ProductService {
     {
       id: 8,
       name: 'Disipador De Calor Ssd M.2 Argb 5v 3 Pines Nvme Ngff Radiado',
-      price: 18700,
+      price: 21950,
+      oldPrice: 45000,
       description: this.getDescription(8),
       image: 'img/DALU_P008_2.webp',
       linkMeli: 'https://articulo.mercadolibre.com.co/MCO-2777299782-disipador-de-calor-ssd-m2-argb-5v-3-pines-nvme-ngff-radiado-_JM'
@@ -44,6 +48,7 @@ export class ProductService {
       id: 4,
       name: 'Kit 3 Ventiladores Argb 120 Mm 5v + Pwm, Fan Building Block',
       price: 119000,
+      oldPrice: 199999,
       description: this.getDescription(4),
       image: 'img/DALU_P007_2.webp'
     },
@@ -51,6 +56,7 @@ export class ProductService {
       id: 1,
       name: 'Cinta Correa Velcro Organizador De Cables X50 Unidades (MULTICOLOR)',
       price: 13999,
+      oldPrice: 24999,
       description: this.getDescription(1),
       image: 'img/DALU23_P003_2_MULTICOLOR.webp',
       linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1372236733-cinta-correa-velcro-organizador-de-cables-x50-unidades-_JM'
@@ -59,6 +65,7 @@ export class ProductService {
       id: 2,
       name: 'Cinta Correa Velcro Organizador De Cables X50 Unidades (NEGRO)',
       price: 13999,
+      oldPrice: 24999,
       description: this.getDescription(1),
       image: 'img/DALU23_P003_2_NEGRO.webp',
       linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1372236733-cinta-correa-velcro-organizador-de-cables-x50-unidades-_JM'
@@ -67,6 +74,7 @@ export class ProductService {
       id: 3,
       name: 'Cinta Correa Velcro Organizador De Cables X50 Unidades (ROJO)',
       price: 13999,
+      oldPrice: 24999,
       description: this.getDescription(1),
       image: 'img/DALU23_P003_2_ROJO.webp',
       linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1372236733-cinta-correa-velcro-organizador-de-cables-x50-unidades-_JM'

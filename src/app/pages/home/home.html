@@ -1,20 +1,33 @@
-<section class="container">
-  
-  <app-banner></app-banner>
+<app-banner></app-banner>
 
-  <div class="product-grid">
-    @for (product of productService.products(); track product.id) {
-      <article class="product-card" [routerLink]="['/product', product.id]" style="cursor: pointer;">
-        <div class="image-container">
-          <img [src]="product.image" [alt]="product.name">
-        </div>
-        <div class="info">
-          <h3>{{ product.name }}</h3>
-          <span class="price">{{ product.price | currency:'$':'symbol':'1.0-0':'es-Co' }} + Envío</span>
-        </div>
-      </article>
-    } @empty {
-      <p>Cargando productos o no hay stock disponible...</p>
-    }
+<div class="products-grid">
+  @for (product of productService.products(); track product.id) {
+  <div class="card-gamer">
+    <div class="badge-new">Nuevo</div>
+
+    <div class="image-container">
+      <img [src]="product.image" [alt]="product.name" loading="lazy">
+    </div>
+
+    <div class="info-container">
+      <!-- <span class="category">{{ product.category }}</span> -->
+      <h3 class="truncate-title">{{ product.name }}</h3>
+
+      <div class="price-section">
+        <span class="current-price">{{product.price | currency:'COP':'symbol-narrow':'1.0-0' }}</span>
+        @if (product.oldPrice) {
+        <span class="old-price">{{ product.oldPrice | currency:'COP':'symbol-narrow':'1.0-0' }}</span>
+        }
+      </div>
+
+      <div class="delivery-tag">
+        <i class="fa fa-truck"></i> Pago contra entrega
+      </div>
+
+      <button class="btn-view" [routerLink]="['/product', product.id]">
+        Ver Detalles <i class="fa fa-arrow-right"></i>
+      </button>
+    </div>
   </div>
-</section>
+  }
+</div>

@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+/* Definición Global */
+:root {
+  --font-titles: 'Orbitron', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Títulos con estilo tecnológico */
+h1, h2, h3, h4, .brand {
+  font-family: var(--font-titles);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Mejora para los 2000 caracteres de descripción */
+.text-long {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.truncate-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Número de líneas permitidas */
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  /* Ajustes extra para estética */
+  line-height: 1.4; /* Espaciado entre líneas */
+  height: 2.8em;    /* line-height * 2 para reservar el espacio siempre */
+}

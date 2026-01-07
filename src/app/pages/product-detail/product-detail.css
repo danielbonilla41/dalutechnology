@@ -30,7 +30,7 @@
 
 h1 {
   margin: 0.5rem 0;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .price-container {
@@ -39,6 +39,9 @@ h1 {
 }
 
 .main-price {
+  font-family: var(--font-titles);
+  color: #2c3e50;
+  letter-spacing: -1px;
   font-size: 2rem;
   font-weight: 800;
   color: #2c3e50;
@@ -176,6 +179,9 @@ h1 {
 }
 
 .payment-note {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 6px;
