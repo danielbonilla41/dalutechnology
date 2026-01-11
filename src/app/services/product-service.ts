@@ -27,6 +27,33 @@ export class ProductService {
       linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1431487755-soporte-para-tarjeta-grafica-argb-uphere-_JM'
     },
     {
+      id: 9,
+      name: 'Mouse Pad Xl Antideslizante Goma 80x30cm Carga Inalámbrica (Jinx)',
+      price: 59999,
+      oldPrice: 115000,
+      description: this.getDescription(9),
+      image: 'img/DALU_P012_3_JINX.webp'
+     // linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1438187361-mouse-pad-xl-antideslizante-goma-80x30cm-carga-inalambrica-_JM'
+    },
+    {
+      id: 10,
+      name: 'Mouse Pad Xl Antideslizante Goma 80x30cm Carga Inalámbrica (Red Dragon)',
+      price: 59999,
+      oldPrice: 115000,
+      description: this.getDescription(9),
+      image: 'img/DALU_P012_3_RED_DRAGON.webp'
+     // linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1438187361-mouse-pad-xl-antideslizante-goma-80x30cm-carga-inalambrica-_JM'
+    },
+    {
+      id: 11,
+      name: 'Mouse Pad Xl Antideslizante Goma 80x30cm Carga Inalámbrica (Jakuza)',
+      price: 59999,
+      oldPrice: 115000,
+      description: this.getDescription(9),
+      image: 'img/DALU_P012_3_JAKUZA.webp'
+     // linkMeli: 'https://articulo.mercadolibre.com.co/MCO-1438187361-mouse-pad-xl-antideslizante-goma-80x30cm-carga-inalambrica-_JM'
+    },
+    {
       id: 7,
       name: 'Pasta Térmica Disipador De Calor Maxtor Ctg8, 4g + Cleanser',
       price: 18950,
@@ -327,6 +354,45 @@ Interfaz: 5V 3 pines + 4 pines pequeños
 Longitud del cable: 420mm
 
 Optimiza el rendimiento y estilo de tu PC con este disipador que no solo protege tu SSD, sino que también ilumina tu setup con efectos RGB dinámicos.`;
+case 9:
+        return `Mouse Pad Gamer RGB Extragrande con Carga Inalámbrica | 800x300mm
+¡Lleva tu setup al siguiente nivel! Este mouse pad no solo ofrece una estética impresionante con iluminación RGB, sino también la máxima funcionalidad con carga inalámbrica integrada.
+
+Lo Más Destacado:
+Carga Inalámbrica Rápida (5W/7.5W/10W): Carga tu smartphone o dispositivo compatible Qi mientras juegas o trabajas. ¡Comodidad sin cables extras!
+
+Tamaño XL para Control Total (800 x 300 x 4 mm): Espacio suficiente para teclado y mouse, garantizando movimientos amplios y sin restricciones.
+
+12 Modos de Iluminación RGB: Personaliza tu ambiente con 9 colores estáticos y 3 efectos dinámicos, controlados fácilmente con un botón táctil.
+
+Precisión y Velocidad: Superficie de tela microtexturizada optimizada para todos los sensores de mouse, brindando un control total en juegos y diseño.
+
+Máxima Estabilidad: Base de goma antideslizante de alta elasticidad que asegura la alfombrilla en su sitio, incluso en el calor de la acción.
+
+Descripción Detallada:
+La alfombrilla gamer RGB de 800x300mm ofrece una experiencia de juego y trabajo superior. Su superficie de tela micro texturizada garantiza movimientos suaves, precisión quirúrgica y un control total del mouse, ideal para gamers de alto rendimiento, diseñadores o profesionales.
+
+Carga Inalámbrica Integrada: Simplemente coloca tu celular en el área designada y cárgalo con potencias de 5W, 7.5W o 10W (compatible con dispositivos Qi), eliminando la necesidad de cables de carga adicionales en tu escritorio.
+
+Cuenta con 12 modos de iluminación RGB que se controlan con un botón táctil intuitivo. Su alimentación por USB permite usarla en cualquier lugar, brindando una estética moderna y funcional.
+
+Además, su material resistente al agua protege contra derrames accidentales, facilitando su limpieza. Su grosor de 4 mm ofrece una superficie cómoda y estable para largas jornadas, y su diseño portátil con cable desmontable permite transportarla fácilmente.
+
+Especificaciones Técnicas y Funcionales:
+
+Carga Inalámbrica: 5W / 7.5W / 10W (Estándar Qi)
+Tamaño: 800 x 300 x 4 mm (Forma Rectangular)
+Iluminación: 12 Modos RGB (9 estáticos + 3 dinámicos)
+Superficie: Micro texturizada para máxima precisión
+Base: Goma antideslizante de alta elasticidad
+Resistencia: Material resistente al agua
+Conexión: Alimentación y Carga por Cable USB (Desmontable)
+Control: Botón táctil de luz integrado
+
+Contenido del Paquete:
+1 Alfombrilla Gamer RGB con Carga Inalámbrica
+1 Cable de carga USB desmontable`
+
       default:
         return '';
     }
